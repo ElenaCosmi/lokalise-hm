@@ -1,0 +1,80 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-navbar {
+  display: grid;
+  justify-content: space-between;
+
+  padding-bottom: 90px;
+
+  border-bottom: 1px solid $color-black;
+
+  gap: $gap;
+  grid-template-areas: "case prod spt comp lgl";
+
+  @include lg-md {
+    grid-template-areas: "case prod spt""case comp lgl";
+  }
+
+  @include md-xs {
+    justify-content: center;
+
+    grid-template-areas: "case case""prod spt""comp lgl";
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  grid-area: prod;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  grid-area: spt;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  grid-area: comp;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  grid-area: lgl;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}

@@ -1,0 +1,35 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.case {
+  display: flex;
+  flex-direction: column;
+
+  width: 290px;
+
+  gap: $gap;
+  grid-area: case;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__logo {
+    width: fit-content;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.5;
+
+    @include md-xs {
+      font-size: 15px;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}

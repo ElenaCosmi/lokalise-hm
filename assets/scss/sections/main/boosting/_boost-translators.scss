@@ -1,0 +1,39 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.boost-translators {
+  display: flex;
+  flex-direction: column;
+
+  gap: $gap-lg;
+
+  @include md-xs {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+
+    line-height: 1.33;
+  }
+
+  &__description {
+    margin: 0;
+
+    font-size: $gap;
+    line-height: 1.5;
+  }
+
+  &__picture {
+    order: -1;
+
+    min-height: 210px;
+  }
+
+  &__link {
+    font-size: $gap;
+    line-height: 1.5;
+  }
+}
